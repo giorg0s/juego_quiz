@@ -15,10 +15,14 @@ public class ActividadInicio extends AppCompatActivity {
 
     private Switch botonModoJuego;
 
+    private ManejadorDB db_puntuaciones;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
+
+        db_puntuaciones = new ManejadorDB(this);
 
         botonInicio = findViewById(R.id.botonInicio);
         botonModoJuego = findViewById(R.id.modo_juego);
